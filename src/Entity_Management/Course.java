@@ -22,6 +22,15 @@ public class Course {
         count++;
     }
 
+    public Course( String title, int duration, String provider, int fees) {
+        count++;
+        this.courseId=count;
+        this.title = title;
+        this.duration = duration;
+        this.provider = provider;
+        this.fees = fees;
+    }
+
     public int getCourseId() {
         return courseId;
     }
