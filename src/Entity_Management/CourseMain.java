@@ -1,9 +1,10 @@
 package Entity_Management;
-
+import java.io.InputStream;
+import java.util.Scanner;
 import java.util.ArrayList;
 
 public class CourseMain {
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
 
         Course c1 = new Course();
         c1.setCourseId(1);
@@ -30,7 +31,7 @@ public class CourseMain {
         Course c4 = new Course(4, "C++", 32, "Edureka", 300);
 
         System.out.println("through Arraylist ");
-        
+
        /* ArrayList<Course> lst=new ArrayList<Course>();
           lst.add(c1);
           lst.add(c2);
@@ -71,5 +72,39 @@ public class CourseMain {
 
         System.out.println(" the duration of course having less than 40 hours duration below ");
         CourseProcessor.printShortDurationCourseNames(courses);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+
+        System.out.println("Enter the Courses size ");
+        int sizeOb=sc.nextInt();
+        Course[] courses2=new Course[sizeOb];
+
+        for (int i = 0; i < courses2.length ; i++) {
+
+            System.out.println("enter the course title " + (i+1) );
+            String title = sc.next();
+            System.out.println("Enter the duration of course "+ (i+1) );
+            int duration=sc.nextInt();
+            System.out.println("Enter the provider of Course " + (i+1) );
+            String provider = sc.next();
+            System.out.println("Enter the fees of course "+(i+1));
+            int fees = sc.nextInt();
+            courses2[i]=new Course(title,duration,provider,fees);
+            System.out.println();
+
+        }
+
+        System.out.println("printing courses");
+        for (Course lst:courses2) {
+            lst.display();
+            System.out.println();
+        }
+
+
+
     }
 }
