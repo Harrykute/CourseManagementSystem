@@ -77,8 +77,6 @@ public class CourseMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-
-
         System.out.println("Enter the Courses size ");
         int sizeOb=sc.nextInt();
         Course[] courses2=new Course[sizeOb];
@@ -103,6 +101,16 @@ public class CourseMain {
             lst.display();
             System.out.println();
         }
+
+        System.out.println(" the average duration of all courses ");
+        AvgDurationClass avgclsDuration= new AvgDurationClass();
+        float AvgofDuration = avgclsDuration.doCalculation(courses2);
+        System.out.println( " Avg = "+ AvgofDuration);
+
+        System.out.println("The Average Fees of all courses ");
+        AvgfeesClass avgclsFees = new AvgfeesClass();
+        float Avgoffees = avgclsFees.doCalculation(courses2);
+        System.out.println("Avg " + Avgoffees);
 
 
 
