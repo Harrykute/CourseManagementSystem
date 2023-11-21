@@ -1,6 +1,9 @@
 package Entity_Management;
 
+import java.util.Objects;
+
 public class Course {
+
     static int count=0;
       private int courseId;
       private String title;

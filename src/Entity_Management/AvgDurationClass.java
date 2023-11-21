@@ -9,6 +9,7 @@ public class AvgDurationClass extends CourseDataCalculator{
         for (int i = 0; i <allCourses.length ; i++) {
 
             totalduration = totalduration + allCourses[i].getDuration();
+
         }
         float  avgOfduration= totalduration/ allCourses.length;
         return avgOfduration;
