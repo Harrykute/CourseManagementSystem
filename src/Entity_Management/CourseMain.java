@@ -112,6 +112,18 @@ public class CourseMain {
         float Avgoffees = avgclsFees.doCalculation(courses2);
         System.out.println("Avg " + Avgoffees);
 
+        CourseInfo courseInfo = new CourseInfo("Udemy",55);
+        TotalCountMatch t =new TotalCountMatch();
+
+        int count = (int)t.processCourseInfo(courses2,courseInfo);
+
+        System.out.println("count of Match object " + count);
+
+         AvgFeesMatchCheck avgMche = new AvgFeesMatchCheck();
+          float avg= avgMche.processCourseInfo(courses2,courseInfo);
+        System.out.println("Avg of Match object " + avg);
+
+
 
 
     }
