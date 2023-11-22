@@ -1,4 +1,7 @@
 package Entity_Management;
+import Entity_Management_Exception.CourseCollection;
+import Entity_Management_Exception.ProviderNotFoundException;
+
 import java.io.InputStream;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -115,15 +118,25 @@ public class CourseMain {
         CourseInfo courseInfo = new CourseInfo("Udemy",55);
         TotalCountMatch t =new TotalCountMatch();
 
-        int count = (int)t.processCourseInfo(courses2,courseInfo);
+        int count = (int) t.processCourseInfo(courses2,courseInfo);
 
-        System.out.println("count of Match object " + count);
+       System.out.println("count of Match object " + count);
 
          AvgFeesMatchCheck avgMche = new AvgFeesMatchCheck();
           float avg= avgMche.processCourseInfo(courses2,courseInfo);
         System.out.println("Avg of Match object " + avg);
 
 
+        CourseCollection.setAvailableCourses(courses2);
+
+        try{
+            String ProviderName = "Udemy";
+            System.out.println("Printing Title Of Match Given Provider ");
+            CourseCollection.printCourseNames(ProviderName);
+        }
+        catch (ProviderNotFoundException ex){
+            System.out.println(ex);
+        }
 
 
     }
