@@ -7,9 +7,9 @@ public class CourseCollection {
     private static Course[] availableCourses ;
 
 
+
     public static void setAvailableCourses(Course[] availableCourses) {
         CourseCollection.availableCourses = availableCourses;
-
     }
 
     static {

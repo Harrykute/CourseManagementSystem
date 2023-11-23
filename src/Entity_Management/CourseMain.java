@@ -129,8 +129,11 @@ public class CourseMain {
 
         CourseCollection.setAvailableCourses(courses2);
 
+
         try{
-            String ProviderName = "Udemy";
+            System.out.println();
+            System.out.println("Enter the Provider name to Match with All given Object");
+            String ProviderName = sc.next();
             System.out.println("Printing Title Of Match Given Provider ");
             CourseCollection.printCourseNames(ProviderName);
         }
