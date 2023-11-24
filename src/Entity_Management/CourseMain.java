@@ -128,9 +128,7 @@ public class CourseMain {
 
 
         CourseCollection.setAvailableCourses(courses2);
-
-
-        try{
+            try{
             System.out.println();
             System.out.println("Enter the Provider name to Match with All given Object");
             String ProviderName = sc.next();
