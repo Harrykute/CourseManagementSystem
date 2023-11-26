@@ -1,8 +1,9 @@
 package Entity_Management;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Course {
+public class Course implements Serializable {
 
     static int count=0;
       private int courseId;
@@ -72,6 +73,11 @@ public class Course {
 
     public void setFees(int fees) {
         this.fees = fees;
+    }
+
+    @Override
+    public String toString() {
+        return courseId + ":" + title + ":" + duration + ":" + provider + ":" + fees ;
     }
 
     public void display(){
