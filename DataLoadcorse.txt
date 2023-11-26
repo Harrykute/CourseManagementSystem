@@ -1,8 +1,0 @@
-
-
-     This is Course Managment System . We are doing IO Operation . with help io of this is file.
-           This Course Managment System is based on providing course with Foloowing Info
-              1 . Course Name
-              2. Duration of course
-              3 . Provider of this course
-              4. fees of this course
