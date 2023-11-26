@@ -4,7 +4,6 @@ import java.util.Objects;
 
 public class CourseInfo {
 
-
     private String ProviderName;
     private int Duration;
 
@@ -40,7 +39,6 @@ public class CourseInfo {
         CourseInfo that = (CourseInfo) o;
         return Duration == that.Duration && Objects.equals(ProviderName, that.ProviderName);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(ProviderName, Duration);
